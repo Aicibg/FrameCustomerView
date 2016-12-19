@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -28,4 +28,14 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.1.0'
     testCompile 'junit:junit:4.12'
+}
+
+publish {
+    //apikey d0a0d054141872de29f43ecd10ed8f0a2e7240d5
+    userOrg = 'donghao'//bintray.com用户名
+    groupId = 'com.donghao'//jcenter上的路径
+    artifactId = 'frameview'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'some customer view usualy was used ?'//描述，不重要
+    website = 'https://github.com/Aicibg/FrameCustomerView'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }
